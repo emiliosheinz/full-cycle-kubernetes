@@ -1,4 +1,4 @@
-
+![278782323-be381844-db4f-412a-ae08-c4de165c3cb7](https://github.com/emiliosheinz/full-cycle-kubernetes/assets/103655828/254f5c94-4146-450f-80f4-df61ce81674d)
 
 # Full Cycle K8s
 
