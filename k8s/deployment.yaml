@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: "goserver"
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,4 +16,30 @@ spec:
     spec:
       containers:
         - name: "goserver"
-          image: "emiliosheinz/hello-go:v2"
+          image: "emiliosheinz/hello-go:v6.3"
+          envFrom:
+            - configMapRef:
+                name: "goserver-env"
+          volumeMounts:
+            - name: config
+              mountPath: "/go/config"
+              readOnly: true
+          # This is the same as but without the need to specify each key:
+          # env:
+          #   - name: NAME
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: "goserver-env"
+          #         key: "NAME"
+          #   - name: AGE
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: "goserver-env"
+          #         key: "AGE"
+      volumes:
+        - name: config
+          configMap:
+            name: "configmap-fruits"
+            items:
+              - key: "fruits"
+                path: "fruits.txt"
