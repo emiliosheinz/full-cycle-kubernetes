@@ -2,7 +2,7 @@
 
 # Full Cycle K8s
 
-This repository contains the code generated during the Kubernetes module of the Full Cycle course. It contains a simple Go application that prints a message when accessed, and a Dockerfile to build the image which will be used by Kubernetes.
+This repository contains the code generated during the Kubernetes module of the Full Cycle course. It contains a simple Go application that prints a message when accessed, and a Dockerfile to build the image which will be used by Kubernetes. Also, inside the `k8s/deployment.yaml` file there is the configuration for the deployment of the application, with examples of how to configure the number of replicas, the config maps, and the liveness and readiness probes.
 
 Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery. Kubernetes follows the the below hierarchical organization of resources:
 
