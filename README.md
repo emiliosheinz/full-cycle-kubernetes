@@ -67,4 +67,4 @@ This will create a pod that will stress the application for 220 seconds, with 16
 
 ```bash
 watch -n1 kubectl get hpa
-```bash
+```
