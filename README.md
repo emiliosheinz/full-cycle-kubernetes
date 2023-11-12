@@ -53,7 +53,7 @@ goserver-747c9b6985-nwsbn   1/1     Running   0          19s
 goserver-747c9b6985-v5bp6   1/1     Running   0          19s
 ```
 
-Also, when accessing `http://localhost:8080` you should see the message `Hello Full Cycle!!!` printed on the screen.
+Also, when accessing `http://localhost:8000` you should see the message `Hello Full Cycle!!!` printed on the screen.
 
 ## 😡 Stressing the application
 
