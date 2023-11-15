@@ -105,3 +105,8 @@ To list all namespaces you can run the following command:
 ```bash
 kubectl get namespace
 ```
+
+### 🔐 Service Accounts and Roles
+
+A service account provides an identity for processes that run in a Pod, and maps to a ServiceAccount object. When you authenticate to the API server, you identify yourself as a particular user. Therefore, Service Accounts along with the proper configuration of Roles can be used to provide an identity for Pods that run in your cluster, that way limiting the access of the Pods to the cluster for example. You can find more information about it [here](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/).
+
