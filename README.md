@@ -89,3 +89,19 @@ Ingress is an API object that manages external access to the services in a clust
 ### 🔒 Cert Manager
 
 Cert-Manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources. It will ensure certificates are valid and up to date periodically, and attempt to renew certificates at an appropriate time before expiry. Currently, this is the most used tool to manage certificates in Kubernetes, and it automatically integrates with Ingress. You can find more information about it [here](https://cert-manager.io/docs/).
+
+### 📦 Namespaces
+
+In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster. Names of resources need to be unique within a namespace, but not across namespaces. Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services, etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc). You can find more information about it [here](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
+
+To create a new namespace you can run the following command:
+
+```bash
+kubectl create namespace <namespace-name>
+```
+
+To list all namespaces you can run the following command:
+
+```bash
+kubectl get namespace
+```
