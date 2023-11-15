@@ -50,6 +50,8 @@ spec:
             - secretRef:
                 name: "goserver-secret"
           volumeMounts:
+            - name: goserver-pvc
+              mountPath: "/go/pvc"
             - name: config
               mountPath: "/go/config"
               readOnly: true
@@ -66,6 +68,9 @@ spec:
           #         name: "goserver-env"
           #         key: "AGE"
       volumes:
+        - name: goserver-pvc
+          persistentVolumeClaim:
+            claimName: goserver-pvc
         - name: config
           configMap:
             name: "configmap-fruits"

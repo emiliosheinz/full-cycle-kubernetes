@@ -25,6 +25,11 @@ _Deployments > Replicasets > Pods > Containers_
     ```bash
     kubectl apply -f k8s/hpa.yaml
     ```
+1. Create the persistent volume claim:
+
+    ```bash
+    kubectl apply -f k8s/pvc.yaml
+    ```
 1. Start the application:
 
     ```bash
