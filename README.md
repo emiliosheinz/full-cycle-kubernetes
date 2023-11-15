@@ -2,13 +2,15 @@
 
 # Full Cycle K8s
 
-This repository contains the code generated during the Kubernetes module of the Full Cycle course. It contains a simple Go application that prints a message when accessed, and a Dockerfile to build the image which will be used by Kubernetes. Also, inside the `k8s` folder there is the configuration for the deployment of the application, with examples of how to configure the number of replicas, the config maps, the liveness and readiness probes, and the horizontal pod autoscaler of the application.
+This repository contains the code generated during the Kubernetes module of the Full Cycle course. It contains a simple Go application that prints a message when accessed, and a Dockerfile to build the image which will be used by Kubernetes. Also, inside the `k8s` folder there is the configuration for the deployment of the application, with examples of how to configure the number of replicas, the config maps, the liveness and readiness probes, the horizontal pod autoscaler of the application, and the persistent volume claim. Additionally, there are some other files that can be used on demand, like `statefulset.yaml` and `mysql-service-headless.yaml`, for example, that can be used to create a MySQL database and a Headless service for it.
 
 Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery. Kubernetes follows the the below hierarchical organization of resources:
 
 _Deployments > Replicasets > Pods > Containers_
 
 ## 🔧 Running locally
+
+The following steps will guide you through the basic process of running the application locally, using Docker and Kubernetes. But, as mentioned before, this repository contains the configuration for a lot of other things. So, feel free to explore the repository and try to run the application with different configurations.
 
 1. You need to have Kind, Docker, and Kubernetes setup locally
 1. Initialize the cluster:
