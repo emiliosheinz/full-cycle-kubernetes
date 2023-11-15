@@ -75,3 +75,13 @@ This will create a pod that will stress the application for 220 seconds, with 16
 ```bash
 watch -n1 kubectl get hpa
 ```
+
+## Additional information
+
+### 🧐 Should I use my database inside Kubernetes?
+
+The answer is: it depends. If you have a simple and small application it can be helpful to have it inside Kubernetes, but when talking about a big and critical application usually using a managed database service is the best option. The main reason for that is that the managed database service will take care of the database for you, so you don't need to worry about it. Also, it will be easier to scale the database if necessary, and you will have a lot of other features that will help you to manage your database. 
+
+### 📪 Ingress
+
+Ingress is an API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL termination and name-based virtual hosting. Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
