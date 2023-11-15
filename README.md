@@ -1,5 +1,3 @@
-![278782323-be381844-db4f-412a-ae08-c4de165c3cb7](https://github.com/emiliosheinz/full-cycle-kubernetes/assets/103655828/254f5c94-4146-450f-80f4-df61ce81674d)
-
 # Full Cycle K8s
 
 This repository contains the code generated during the Kubernetes module of the Full Cycle course. It contains a simple Go application that prints a message when accessed, and a Dockerfile to build the image which will be used by Kubernetes. Also, inside the `k8s` folder there is the configuration for the deployment of the application, with examples of how to configure the number of replicas, the config maps, the liveness and readiness probes, the horizontal pod autoscaler of the application, and the persistent volume claim. Additionally, there are some other files that can be used on demand, like `statefulset.yaml` and `mysql-service-headless.yaml`, for example, that can be used to create a MySQL database and a Headless service for it.
