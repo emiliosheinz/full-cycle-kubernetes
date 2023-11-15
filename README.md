@@ -85,3 +85,7 @@ The answer is: it depends. If you have a simple and small application it can be 
 ### 📪 Ingress
 
 Ingress is an API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL termination and name-based virtual hosting. Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+
+### 🔒 Cert Manager
+
+Cert-Manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources. It will ensure certificates are valid and up to date periodically, and attempt to renew certificates at an appropriate time before expiry. Currently, this is the most used tool to manage certificates in Kubernetes, and it automatically integrates with Ingress. You can find more information about it [here](https://cert-manager.io/docs/).
