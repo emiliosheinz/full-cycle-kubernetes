@@ -41,7 +41,7 @@ The following steps will guide you through the basic process of running the appl
     kubectl port-forward service/goserver-service 8000:80
     ```
 
-### 🎯 Expected result
+### Expected result
 
 After running the commands above Kubernetes will create the *deployment*, *replicaset* and *3 pods* for the application. To check if the application is running execute the command below:
 
@@ -74,21 +74,21 @@ This will create a pod that will stress the application for 220 seconds, with 16
 watch -n1 kubectl get hpa
 ```
 
-## Additional information
+## 📚 Additional information
 
-### 🧐 Should I use my database inside Kubernetes?
+### Should I use my database inside Kubernetes?
 
 The answer is: it depends. If you have a simple and small application it can be helpful to have it inside Kubernetes, but when talking about a big and critical application usually using a managed database service is the best option. The main reason for that is that the managed database service will take care of the database for you, so you don't need to worry about it. Also, it will be easier to scale the database if necessary, and you will have a lot of other features that will help you to manage your database. 
 
-### 📪 Ingress
+### Ingress
 
 Ingress is an API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL termination and name-based virtual hosting. Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
 
-### 🔒 Cert Manager
+### Cert Manager
 
 Cert-Manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources. It will ensure certificates are valid and up to date periodically, and attempt to renew certificates at an appropriate time before expiry. Currently, this is the most used tool to manage certificates in Kubernetes, and it automatically integrates with Ingress. You can find more information about it [here](https://cert-manager.io/docs/).
 
-### 📦 Namespaces
+### Namespaces
 
 In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster. Names of resources need to be unique within a namespace, but not across namespaces. Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services, etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc). You can find more information about it [here](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
@@ -104,7 +104,7 @@ To list all namespaces you can run the following command:
 kubectl get namespace
 ```
 
-### 🔐 Service Accounts and Roles
+### Service Accounts and Roles
 
 A service account provides an identity for processes that run in a Pod, and maps to a ServiceAccount object. When you authenticate to the API server, you identify yourself as a particular user. Therefore, Service Accounts along with the proper configuration of Roles can be used to provide an identity for Pods that run in your cluster, that way limiting the access of the Pods to the cluster for example. You can find more information about it [here](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/).
 
