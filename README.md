@@ -6,7 +6,7 @@ Kubernetes is an open-source system for automating deployment, scaling, and mana
 
 _Deployments > Replicasets > Pods > Containers_
 
-## 🔧 Running locally
+## Running locally
 
 The following steps will guide you through the basic process of running the application locally, using Docker and Kubernetes. But, as mentioned before, this repository contains the configuration for a lot of other things. So, feel free to explore the repository and try to run the application with different configurations.
 
@@ -60,7 +60,7 @@ goserver-747c9b6985-v5bp6   1/1     Running   0          19s
 
 Also, when accessing `http://localhost:8000` you should see the message `Hello Full Cycle!!!` printed on the screen.
 
-## 😡 Stressing the application
+## Stressing the application
 
 In order tu stress the application and see the horizontal pod autoscaler in action, you can run the following command:
 
@@ -74,7 +74,7 @@ This will create a pod that will stress the application for 220 seconds, with 16
 watch -n1 kubectl get hpa
 ```
 
-## 📚 Additional information
+## Additional information
 
 ### Should I use my database inside Kubernetes?
 
